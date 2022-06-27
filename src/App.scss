@@ -1,34 +1,66 @@
 .App {
   max-width: 860px;
-  margin: 40px auto;
+  margin: 50px auto;
   text-align: center;
   user-select: none;
 
- button {
-  background: none;
-  border: 2px solid #fff;
-  width: 130px;
-  height:35px;
-  padding: 6px 12px;
-  border-radius: 4px;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1em;
-  transition: all 0.4s ease;
+  h1 {
+    font-size: 1.9em;
 
-  &:hover {
-    background: #5539A3;
+    @media (max-width: 600px) {
+      font-size: 1.1em;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 0.9em;
+    }
+
+  }
+
+  button {
+    background: none;
+    border: 2px solid #fff;
+    width: 130px;
+    height: 35px;
+    padding: 6px 12px;
+    border-radius: 4px;
     color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background: #5539a3;
+      color: #fff;
+    }
+
+    &.disabled {
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      width: 100px;
+      height: 30px;
+      font-size: 0.7em;
+    }
+
+    @media (max-width: 350px) {
+      width: 80px;
+      height: 26px;
+      font-size: 0.6em;
+    }
   }
 
-  &.disabled {
-    pointer-events: none;
+  p {
+    font-size: 1.5em;
+
+    @media (max-width: 600px) {
+      font-size: 1.1em;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 0.9em;
+    }
   }
- }
-
- p {
-  font-size: 1.5em;
- }
-
 }
