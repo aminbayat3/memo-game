@@ -18,7 +18,6 @@ function App() {
   // start a new game automatically
   useEffect(() => {
     gsap.to(title.current, { duration : 3, text: "Memo Game"});
-    gsap.to('.turns', { duration: 3, text: `Turns: ${turns}`});
     gsap.fromTo(button.current, {scale: 0.7 }, { duration: 1, scale: 1});
 
     shuffleCards();
@@ -29,7 +28,7 @@ function App() {
       <h1 ref={title}></h1>
       <button className={disabled ? 'disabled' : ''} onClick={shuffleCards} ref={button}>New Game</button>
       <CardGrid />
-      <p className="turns"></p>
+      <p className="turns">Turns: {turns}</p>
     </div>
   );
 }
