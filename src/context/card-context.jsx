@@ -55,7 +55,7 @@ export const CardProvider = ({ children }) => {
       flip.play();
       setTimeout(() => {
         choiceOne ? setChoiceTwo(card) : setChoiceOne(card);
-      }, 300);
+      }, 200);
   };
 
   useEffect(() => {
